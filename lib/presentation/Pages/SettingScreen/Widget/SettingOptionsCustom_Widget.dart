@@ -6,19 +6,17 @@ import '../../../../Utils/Helper/Helper.dart';
 class SettingOptionsCustomWidget extends StatelessWidget {
   const SettingOptionsCustomWidget({
     super.key,
-    required this.optionName,
     required this.trailing,
     required this.lightImagePath,
     required this.darkImagePath,
-    required this.customTrailingExpanded,
     this.onTap,
+    required this.optionName,
   });
 
   final String lightImagePath;
-  final String darkImagePath;
   final String optionName;
+  final String darkImagePath;
   final Widget trailing;
-  final int customTrailingExpanded;
   final void Function()? onTap;
 
   @override
@@ -56,15 +54,17 @@ class SettingOptionsCustomWidget extends StatelessWidget {
                 ),
               ),
               Expanded(
-                flex: 6,
-                child: Text(
-                  optionName,
-                  style: Theme.of(context).textTheme.displayMedium,
+                flex: 8,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      optionName,
+                      style: Theme.of(context).textTheme.displayMedium,
+                    ),
+                    trailing,
+                  ],
                 ),
-              ),
-              Expanded(
-                flex: customTrailingExpanded,
-                child: trailing,
               ),
             ],
           ),

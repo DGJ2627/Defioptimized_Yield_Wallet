@@ -46,6 +46,8 @@ dependencies:
   auto_size_text:
   buttons_tabbar:
   syncfusion_flutter_datepicker:
+  dotted_border:
+
 
 
 dev_dependencies:
@@ -58,6 +60,8 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   flutter_lints: ^3.0.0
+  build_runner:
+  build_web_compilers:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

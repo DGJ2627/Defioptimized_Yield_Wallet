@@ -1,4 +1,5 @@
 import 'package:defioptimized_yield/Utils/Helper/Helper.dart';
+import 'package:defioptimized_yield/Utils/Theme/AppTheme.dart';
 import 'package:defioptimized_yield/Utils/constants/ImagePath/ImagePath.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/ChangePassword_View/ChangePassword_View.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/EditProfileScreen_View/EditProfileScreen_View.dart';
@@ -119,15 +120,17 @@ class SettingScreen extends StatelessWidget {
                         children: [
                           //change password
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 2,
                             lightImagePath: ImagePath
                                 .imagePath.changePasswordLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.changePasswordIconSvgImage,
                             optionName: "Change Password",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                             onTap: () => Get.to(const ChangePasswordView()),
                           ),
@@ -136,15 +139,17 @@ class SettingScreen extends StatelessWidget {
                           //kyc verification
                           SettingOptionsCustomWidget(
                             onTap: () => Get.to(const KYCVerificationView()),
-                            customTrailingExpanded: 2,
                             lightImagePath: ImagePath
                                 .imagePath.kycVerificationLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.kycVerificationIconSvgImage,
                             optionName: "KYC Verification",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                           ),
                           const Gap(10),
@@ -152,125 +157,182 @@ class SettingScreen extends StatelessWidget {
                           //security
                           SettingOptionsCustomWidget(
                             onTap: () => Get.to(const SecurityView()),
-                            customTrailingExpanded: 2,
                             lightImagePath:
                                 ImagePath.imagePath.securityLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.securityIconSvgImage,
                             optionName: "Security",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                           ),
                           const Gap(10),
 
                           //push notification
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 2,
+                            optionName: "Push Notification",
                             lightImagePath: ImagePath
                                 .imagePath.pushNotificationLightIconSvgImage,
                             darkImagePath: ImagePath
                                 .imagePath.pushNotificationIconSvgImage,
-                            optionName: "Push Notification",
                             trailing: Padding(
                               padding: const EdgeInsets.only(right: 16),
-                              child: CustomSwitch(
-                                onTap: () => switchController.toggleSwitch,
-                                switchValue: switchController.isSwitched.value,
+                              child: SizedBox(
+                                width: 50,
+                                child: CustomSwitch(
+                                  switchBackGroundColor: dark
+                                      ? const Color(0xff131212)
+                                          .withOpacity(0.14)
+                                      : const Color(0xff838284),
+                                  switchDotLightColor: const [
+                                    Color(0xff379FFE),
+                                    Color(0xff555DFD),
+                                  ],
+                                  switchDotDarkColor: const [
+                                    Color(0xff379FFE),
+                                    Color(0xff555DFD),
+                                  ],
+                                  onTap: () => switchController.toggleSwitch(),
+                                  switchValue:
+                                      switchController.isSwitched.value,
+                                ),
                               ),
                             ),
                           ),
-
                           const Gap(10),
 
                           //get support
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 2,
                             lightImagePath:
                                 ImagePath.imagePath.getSupportLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.getSupportIconSvgImage,
                             optionName: "Get Support",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                           ),
                           const Gap(10),
 
                           //terms of services
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 2,
                             lightImagePath: ImagePath
                                 .imagePath.termsOfServicesLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.termsOfServicesIconSvgImage,
-                            optionName: "Terms of Services",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            optionName: "Terms Of Services",
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                           ),
                           const Gap(10),
 
                           //privacy policy
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 2,
+                            optionName: "Privacy Policy",
                             lightImagePath: ImagePath
                                 .imagePath.privacyPolicyLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.privacyPolicyIconSvgImage,
-                            optionName: "Privacy Policy",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                           ),
                           const Gap(10),
 
                           //theme
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 6,
                             lightImagePath:
                                 ImagePath.imagePath.appThemeLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.appThemeIconSvgImage,
                             optionName: (switchController.isSwitchedTheme.value)
-                                ? "Theme(Light)"
-                                : "Theme(Dark)",
-                            trailing: Row(
-                              children: [
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Iconsax.sun_1),
+                                ? "Theme(Dark)"
+                                : "Theme(Light)",
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 14),
+                              child: SizedBox(
+                                height: 50,
+                                width: 150,
+                                child: Row(
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                        Iconsax.sun_1,
+                                        size: 20,
+                                      ),
+                                    ),
+                                    SizedBox(
+                                      width: 50,
+                                      child: CustomSwitch(
+                                        switchBackGroundColor: dark
+                                            ? const Color(0xff131212)
+                                                .withOpacity(0.14)
+                                            : const Color(0xff838284),
+                                        switchDotLightColor: const [
+                                          Colors.white,
+                                          Colors.white,
+                                        ],
+                                        switchDotDarkColor: const [
+                                          Color(0xff379FFE),
+                                          Color(0xff555DFD),
+                                        ],
+                                        onTap: () {
+                                          switchController.toggleSwitchTheme();
+                                          switchController.isSwitchedTheme.value
+                                              ? AppTheme.lightTheme
+                                              : AppTheme.darkTheme;
+                                        },
+                                        switchValue: switchController
+                                            .isSwitchedTheme.value,
+                                      ),
+                                    ),
+                                    IconButton(
+                                      onPressed: () {},
+                                      icon: const Icon(
+                                        Iconsax.moon,
+                                        size: 20,
+                                      ),
+                                    ),
+                                  ],
                                 ),
-                                CustomSwitch(
-                                  onTap: () =>
-                                      switchController.toggleSwitchTheme,
-                                  switchValue:
-                                      switchController.isSwitchedTheme.value,
-                                ),
-                                IconButton(
-                                  onPressed: () {},
-                                  icon: const Icon(Iconsax.sun_1),
-                                ),
-                              ],
+                              ),
                             ),
                           ),
                           const Gap(10),
 
                           //logout
                           SettingOptionsCustomWidget(
-                            customTrailingExpanded: 2,
                             lightImagePath:
                                 ImagePath.imagePath.logoutLightIconSvgImage,
                             darkImagePath:
                                 ImagePath.imagePath.logoutIconSvgImage,
                             optionName: "Logout",
-                            trailing: Icon(
-                              Iconsax.arrow_right_3,
-                              color: dark ? Colors.black : Colors.white,
+                            trailing: Padding(
+                              padding: const EdgeInsets.only(right: 16),
+                              child: Icon(
+                                Iconsax.arrow_right_3,
+                                color: dark ? Colors.black : Colors.white,
+                              ),
                             ),
                           ),
                           const Gap(10),

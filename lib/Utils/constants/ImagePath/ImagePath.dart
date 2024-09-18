@@ -68,4 +68,8 @@ class ImagePath {
   String logoutLightIconSvgImage = "asset/SVG/Icon/icn_logout_light.svg";
 
   String cameraIconSvgImage = "asset/SVG/Icon/icn_camera.svg";
+
+  String imageUploadIconSvgImage = "asset/SVG/Icon/upload_icon_svg.svg";
+  String imageUploadDarkIconSvgImage =
+      "asset/SVG/Icon/upload_dark_icon_svg.svg";
 }

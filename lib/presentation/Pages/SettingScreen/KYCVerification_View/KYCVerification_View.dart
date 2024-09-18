@@ -1,10 +1,12 @@
+import 'package:defioptimized_yield/Utils/constants/ImagePath/ImagePath.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/KYCVerification_View/Controller/CustomRadioButtonController.dart';
 import 'package:defioptimized_yield/presentation/Widgets/CustomButton_Widget.dart';
+import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../../../../Utils/Helper/Helper.dart';
 import '../../../Widgets/CustomDialogBox_Widget.dart';
 import '../../BottomNavigationScreen/BottomNavigationScreen_VIew.dart';
@@ -129,19 +131,118 @@ class KYCVerificationView extends StatelessWidget {
                         width: double.infinity,
                         child: Column(
                           children: [
-                            Container(
-                              height: 156,
-                              width: double.infinity,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(20),
-                                //border: Border.all(color: Colors.grey),
+                            DottedBorder(
+                              dashPattern: const [8, 4],
+                              strokeWidth: 2,
+                              borderType: BorderType.RRect,
+                              radius: const Radius.circular(16),
+                              color: dark
+                                  ? const Color(0xffB3B3B3).withOpacity(0.2)
+                                  : Colors.transparent,
+                              child: Container(
+                                height: 156,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: dark
+                                      ? const Color(0xffF8F8F8)
+                                      : Colors.white.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      alignment: AlignmentDirectional.center,
+                                      width: 50,
+                                      height: 50,
+                                      child: SvgPicture.asset(
+                                        dark
+                                            ? ImagePath.imagePath
+                                                .imageUploadIconSvgImage
+                                            : ImagePath.imagePath
+                                                .imageUploadDarkIconSvgImage,
+                                      ),
+                                    ),
+                                    const Gap(10),
+                                    Text(
+                                      "Upload Proof ID Card",
+                                      style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500,
+                                          color: dark
+                                              ? Colors.black
+                                              : Colors.white),
+                                    ),
+                                    const Gap(5),
+                                    Text(
+                                      "Front Side",
+                                      style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: dark
+                                              ? const Color(0xff838284)
+                                              : const Color(0xff777B95)),
+                                    ),
+                                  ],
+                                ),
                               ),
                             ),
                             const Gap(30),
-                            Container(
-                              height: 156,
-                              width: double.infinity,
-                              color: Colors.yellow,
+                            DottedBorder(
+                              dashPattern: const [8, 4],
+                              strokeWidth: 2,
+                              borderType: BorderType.RRect,
+                              radius: const Radius.circular(16),
+                              color: dark
+                                  ? const Color(0xffB3B3B3).withOpacity(0.2)
+                                  : Colors.transparent,
+                              child: Container(
+                                height: 156,
+                                width: double.infinity,
+                                decoration: BoxDecoration(
+                                  color: dark
+                                      ? const Color(0xffF8F8F8)
+                                      : Colors.white.withOpacity(0.1),
+                                  borderRadius: BorderRadius.circular(16),
+                                ),
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Container(
+                                      alignment: AlignmentDirectional.center,
+                                      width: 50,
+                                      height: 50,
+                                      child: SvgPicture.asset(
+                                        dark
+                                            ? ImagePath.imagePath
+                                                .imageUploadIconSvgImage
+                                            : ImagePath.imagePath
+                                                .imageUploadDarkIconSvgImage,
+                                      ),
+                                    ),
+                                    const Gap(10),
+                                    Text(
+                                      "Upload Proof ID Card",
+                                      style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 14,
+                                          fontWeight: FontWeight.w500,
+                                          color: dark
+                                              ? Colors.black
+                                              : Colors.white),
+                                    ),
+                                    const Gap(5),
+                                    Text(
+                                      "Back Side",
+                                      style: GoogleFonts.plusJakartaSans(
+                                          fontSize: 12,
+                                          fontWeight: FontWeight.w400,
+                                          color: dark
+                                              ? const Color(0xff838284)
+                                              : const Color(0xff777B95)),
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ],
                         ),

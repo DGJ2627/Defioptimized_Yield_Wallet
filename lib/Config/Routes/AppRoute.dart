@@ -18,6 +18,7 @@ import 'package:get/get.dart';
 
 import '../../presentation/Pages/HomeScreen/AllTransactionTabBarScreen_View/AllTransactionScreens/AllTransactionScreens.dart';
 import '../../presentation/Pages/ROIScreen/AddInvestmentScreen_View/AddInvestmentScreen_View.dart';
+import '../../presentation/Pages/SettingScreen/Security_View/GoogleEmailAuthenticator/GoogleEmailAuthenticator.dart';
 
 class AppRoute {
   static final List<GetPage<dynamic>> pages = [
@@ -61,5 +62,8 @@ class AppRoute {
     GetPage(
         name: '/KYCVerificationView', page: () => const KYCVerificationView()),
     GetPage(name: '/SecurityView', page: () => const SecurityView()),
+    GetPage(
+        name: '/GoogleEmailAuthenticator',
+        page: () => const GoogleEmailAuthenticator()),
   ];
 }
