@@ -1,5 +1,5 @@
-import 'package:defioptimized_yield/Utils/Helper/Helper.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../Controller/Onboarding_Controller.dart';
@@ -11,12 +11,12 @@ class OnBoardingSkipWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final dark = HelperFunction.isDarkMode(context);
+    final controller = Get.put(OnBoardingController());
     return Positioned(
       top: 50,
       right: 20,
       child: TextButton(
-        onPressed: () => OnBoardingController.instance.skipPage(),
+        onPressed: () => controller.skipPage(),
         child: Text(
           "Skip",
           style: GoogleFonts.plusJakartaSans(

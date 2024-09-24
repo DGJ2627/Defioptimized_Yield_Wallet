@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../Utils/Helper/Helper.dart';
 import '../Controller/Onboarding_Controller.dart';
@@ -10,6 +11,7 @@ class OnBoardingNextButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final controller = Get.put(OnBoardingController());
     final dark = HelperFunction.isDarkMode(context);
     final height = HelperFunction.screenHeight(context);
     final width = HelperFunction.screenWidth(context);
@@ -17,7 +19,7 @@ class OnBoardingNextButton extends StatelessWidget {
       right: width * 0.20,
       bottom: height * 0.05,
       child: GestureDetector(
-        onTap: () => OnBoardingController.instance.nextPage(),
+        onTap: () => controller.nextPage(),
         child: Container(
           alignment: Alignment.center,
           height: height * 0.06,

@@ -72,4 +72,24 @@ class ImagePath {
   String imageUploadIconSvgImage = "asset/SVG/Icon/upload_icon_svg.svg";
   String imageUploadDarkIconSvgImage =
       "asset/SVG/Icon/upload_dark_icon_svg.svg";
+
+  String googleAuthenticatorAppImageSvgImage =
+      "asset/SVG/Logo/google-authenticator-image.svg";
+  String qrCodeImageSvgImage = "asset/SVG/Logo/qr_code_image.svg";
+  String qrCodeLightImageSvgImage = "asset/SVG/Logo/qr_code_light_image.svg";
+  String backUpImageSvgImage = "asset/SVG/Logo/backup_key_image.svg";
+
+  String playStoreImageSvgImage = "asset/SVG/Logo/play-black.svg";
+  String appStoreImageSvgImage = "asset/SVG/Logo/appstore-black.svg";
+
+  String mailLightIconSvg = "asset/SVG/Icon/defi_icn_Mail_light.svg";
+  String mailDarkIconSvg = "asset/SVG/Icon/defi_icn_Mail.svg";
+
+  String generateTicketIconSvg = "asset/SVG/Icon/icn_ticket.svg";
+
+  String uploadLightIconSvg = "asset/SVG/Logo/document-upload_light.svg";
+  String uploadDarkIconSvg = "asset/SVG/Logo/document-upload_dark.svg";
+
+  String sendMessageIconSvg = "asset/SVG/Icon/icn_send.svg";
+  String sendAttachmentIconSvg = "asset/SVG/Icon/Attach document.svg";
 }

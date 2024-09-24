@@ -51,7 +51,8 @@ class HomeScreen extends StatelessWidget {
                           ),
                           GestureDetector(
                             onTap: () {
-                              Get.to(const AllTransactionTabBarScreenView());
+                              Get.to(
+                                  () => const AllTransactionTabBarScreenView());
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -77,8 +78,8 @@ class HomeScreen extends StatelessWidget {
                       const Gap(20),
 
                       TransactionHistoryWidget(
-                        isNotShow: false,
-                        inNotStatus: true,
+                        // isNotShow: false,
+                        // inNotStatus: true,
                         image: ImagePath.imagePath.returnOnHistoryIcon,
                         title: "Balance Deposit",
                         transactionTime: "15 May 2020 8:00 am",
@@ -94,8 +95,8 @@ class HomeScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        isNotShow: true,
-                        inNotStatus: false,
+                        // isNotShow: true,
+                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawPendingIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -112,8 +113,8 @@ class HomeScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        isNotShow: true,
-                        inNotStatus: false,
+                        // isNotShow: true,
+                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawFailedIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -130,8 +131,8 @@ class HomeScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        isNotShow: true,
-                        inNotStatus: false,
+                        // isNotShow: true,
+                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawSuccessfullyIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -148,8 +149,8 @@ class HomeScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        isNotShow: false,
-                        inNotStatus: true,
+                        // isNotShow: false,
+                        // inNotStatus: true,
                         image: ImagePath.imagePath.returnOnHistoryIcon,
                         title: "Balance Deposit",
                         transactionTime: "15 May 2020 8:00 am",

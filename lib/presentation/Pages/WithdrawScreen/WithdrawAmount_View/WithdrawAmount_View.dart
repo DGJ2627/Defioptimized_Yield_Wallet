@@ -6,7 +6,6 @@ import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-
 class WithdrawAmountView extends StatelessWidget {
   const WithdrawAmountView({super.key});
 
@@ -170,14 +169,15 @@ class WithdrawAmountView extends StatelessWidget {
                     ),
                   ),
                 ),
-                const Gap(450),
+                const Gap(420),
                 Align(
                   alignment: Alignment.center,
                   child: CustomButtonWidget(
                     height: 56,
                     width: 335,
                     text: "Withdraw",
-                    onTap: () => Get.to(const WithdrawPasswordScreenView()),
+                    onTap: () =>
+                        Get.to(() => const WithdrawPasswordScreenView()),
                   ),
                 )
               ],

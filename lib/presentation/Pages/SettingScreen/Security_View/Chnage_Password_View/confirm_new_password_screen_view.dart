@@ -95,12 +95,8 @@ class ConfirmNewPasswordScreenView extends StatelessWidget {
                       titleStyle: const TextStyle(fontSize: 0),
                       content: CustomDialogBox(
                         btnOnTap: () {
-                          Get.offUntil(
-                            MaterialPageRoute(
-                              builder: (context) => const SecurityView(),
-                            ),
-                            (route) => true,
-                          );
+                          Get.until(
+                              (route) => Get.currentRoute == '/SecurityView');
                         },
                         btnText: "Done",
                         dialogTitle: "Congratulation!",

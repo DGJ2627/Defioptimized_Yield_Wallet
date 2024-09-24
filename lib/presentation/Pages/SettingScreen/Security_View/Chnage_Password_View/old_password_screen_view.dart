@@ -1,4 +1,4 @@
-import 'package:defioptimized_yield/presentation/Pages/SettingScreen/Security_View/EmailAuthenticator_View/set_new_password_screen_view.dart';
+import 'package:defioptimized_yield/presentation/Pages/SettingScreen/Security_View/Chnage_Password_View/set_new_password_screen_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -87,7 +87,7 @@ class OldPasswordScreenView extends StatelessWidget {
                 alignment: Alignment.center,
                 child: CustomButtonWidget(
                     onTap: () {
-                      Get.to(const SetNewPasswordScreenView());
+                      Get.to(() => const SetNewPasswordScreenView());
                     },
                     height: Height * 0.07,
                     width: Width * 0.8,

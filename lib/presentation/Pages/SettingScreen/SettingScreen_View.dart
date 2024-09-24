@@ -1,16 +1,18 @@
 import 'package:defioptimized_yield/Utils/Helper/Helper.dart';
-import 'package:defioptimized_yield/Utils/Theme/AppTheme.dart';
 import 'package:defioptimized_yield/Utils/constants/ImagePath/ImagePath.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/ChangePassword_View/ChangePassword_View.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/EditProfileScreen_View/EditProfileScreen_View.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/KYCVerification_View/KYCVerification_View.dart';
 import 'package:defioptimized_yield/presentation/Pages/SettingScreen/Security_View/Security_View.dart';
+import 'package:defioptimized_yield/presentation/Pages/SettingScreen/getsupport_View/get_support_View.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
 import '../../../Utils/Theme/GradientColor.dart';
+import '../../Widgets/CustomButton_Widget.dart';
 import 'Controller/Switch_Controller.dart';
 import 'Widget/CustomSwitch_Widget.dart';
 import 'Widget/SettingOptionsCustom_Widget.dart';
@@ -21,6 +23,8 @@ class SettingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final switchController = Get.put(CustomSwitchController());
+    final height = HelperFunction.screenHeight(context);
+    final width = HelperFunction.screenWidth(context);
     final dark = HelperFunction.isDarkMode(context);
     return Scaffold(
       body: Obx(
@@ -78,7 +82,8 @@ class SettingScreen extends StatelessWidget {
                           ],
                         ),
                         GestureDetector(
-                          onTap: () => Get.to(const EditProfileScreenView()),
+                          onTap: () =>
+                              Get.to(() => const EditProfileScreenView()),
                           child: Container(
                             alignment: Alignment.center,
                             height: 27,
@@ -132,13 +137,15 @@ class SettingScreen extends StatelessWidget {
                                 color: dark ? Colors.black : Colors.white,
                               ),
                             ),
-                            onTap: () => Get.to(const ChangePasswordView()),
+                            onTap: () =>
+                                Get.to(() => const ChangePasswordView()),
                           ),
                           const Gap(10),
 
                           //kyc verification
                           SettingOptionsCustomWidget(
-                            onTap: () => Get.to(const KYCVerificationView()),
+                            onTap: () =>
+                                Get.to(() => const KYCVerificationView()),
                             lightImagePath: ImagePath
                                 .imagePath.kycVerificationLightIconSvgImage,
                             darkImagePath:
@@ -156,7 +163,7 @@ class SettingScreen extends StatelessWidget {
 
                           //security
                           SettingOptionsCustomWidget(
-                            onTap: () => Get.to(const SecurityView()),
+                            onTap: () => Get.to(() => const SecurityView()),
                             lightImagePath:
                                 ImagePath.imagePath.securityLightIconSvgImage,
                             darkImagePath:
@@ -207,6 +214,7 @@ class SettingScreen extends StatelessWidget {
 
                           //get support
                           SettingOptionsCustomWidget(
+                            onTap: () => Get.to(() => const GetSupportView()),
                             lightImagePath:
                                 ImagePath.imagePath.getSupportLightIconSvgImage,
                             darkImagePath:
@@ -274,12 +282,15 @@ class SettingScreen extends StatelessWidget {
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceEvenly,
                                   children: [
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Iconsax.sun_1,
-                                        size: 20,
-                                      ),
+                                    Icon(
+                                      Iconsax.sun_1,
+                                      size: 20,
+                                      color: dark
+                                          ? (switchController
+                                                  .isSwitchedTheme.value)
+                                              ? Colors.white
+                                              : Colors.blue
+                                          : const Color(0xff838284),
                                     ),
                                     SizedBox(
                                       width: 50,
@@ -298,30 +309,91 @@ class SettingScreen extends StatelessWidget {
                                         ],
                                         onTap: () {
                                           switchController.toggleSwitchTheme();
-                                          switchController.isSwitchedTheme.value
-                                              ? AppTheme.lightTheme
-                                              : AppTheme.darkTheme;
                                         },
                                         switchValue: switchController
                                             .isSwitchedTheme.value,
                                       ),
                                     ),
-                                    IconButton(
-                                      onPressed: () {},
-                                      icon: const Icon(
-                                        Iconsax.moon,
-                                        size: 20,
-                                      ),
+                                    Icon(
+                                      Iconsax.moon,
+                                      size: 20,
+                                      color: dark
+                                          ? const Color(0xff838284)
+                                          : (switchController
+                                                  .isSwitchedTheme.value)
+                                              ? Colors.white
+                                              : const Color(0xff838284),
                                     ),
                                   ],
                                 ),
                               ),
                             ),
                           ),
+
                           const Gap(10),
 
                           //logout
                           SettingOptionsCustomWidget(
+                            onTap: () {
+                              Get.defaultDialog(
+                                radius: 10,
+                                backgroundColor:
+                                    dark ? Colors.white : Colors.black45,
+                                title: "",
+                                titleStyle: const TextStyle(fontSize: 0),
+                                content: Container(
+                                  height: height * 0.4,
+                                  width: width * 0.8,
+                                  decoration: BoxDecoration(
+                                      color: dark
+                                          ? Colors.white
+                                          : const Color(0xff1E1F23),
+                                      borderRadius: BorderRadius.circular(10)),
+                                  child: Column(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Container(
+                                        alignment: Alignment.center,
+                                        height: height * 0.2,
+                                        width: width * 0.4,
+                                        child: SvgPicture.asset(
+                                          dark
+                                              ? ImagePath.imagePath
+                                                  .logoutLightIconSvgImage
+                                              : ImagePath
+                                                  .imagePath.logoutIconSvgImage,
+                                          fit: BoxFit.cover,
+                                          width: width * 0.13,
+                                          height: height * 0.13,
+                                        ),
+                                      ),
+                                      Align(
+                                        alignment: Alignment.center,
+                                        child: Text(
+                                          "Are you sure want to logout?",
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .displayMedium,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        height: height * 0.020,
+                                      ),
+                                      CustomButtonWidget(
+                                        height: height * 0.06,
+                                        width: width * 0.6,
+                                        text: "Logout",
+                                        onTap: () {
+                                          Get.back();
+                                        },
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              );
+                            },
                             lightImagePath:
                                 ImagePath.imagePath.logoutLightIconSvgImage,
                             darkImagePath:

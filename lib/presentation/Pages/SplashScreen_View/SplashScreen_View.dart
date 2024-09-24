@@ -14,7 +14,7 @@ class SplashScreenView extends StatelessWidget {
     final dark = HelperFunction.isDarkMode(context);
     Timer(const Duration(seconds: 2), () {
       Get.offAll(
-        const OnBoardingScreen(),
+        () => const OnBoardingScreen(),
       );
     });
     return Scaffold(

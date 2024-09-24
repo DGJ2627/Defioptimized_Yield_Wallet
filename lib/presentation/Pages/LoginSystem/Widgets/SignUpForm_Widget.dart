@@ -194,7 +194,7 @@ class SignUpFormWidget extends StatelessWidget {
                   alignment: Alignment.topLeft,
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const ForgotPasswordScreen());
+                      Get.to(() => const ForgotPasswordScreen());
                     },
                     child: Row(
                       children: [
@@ -254,7 +254,7 @@ class SignUpFormWidget extends StatelessWidget {
                   width: buttonWidth * 0.7,
                   text: "Sign Up",
                   onTap: () {
-                    Get.to(const SignUpVerificationScreen());
+                    Get.to(() => const SignUpVerificationScreen());
                   },
                 ),
               ],

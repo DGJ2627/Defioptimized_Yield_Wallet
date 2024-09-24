@@ -1,4 +1,5 @@
 import 'package:defioptimized_yield/Utils/Helper/Helper.dart';
+import 'package:defioptimized_yield/presentation/Pages/BottomNavigationScreen/BottomNavigationScreen_VIew.dart';
 import 'package:defioptimized_yield/presentation/Pages/LoginSystem/ForgotPassword_View/ForgotPasswordScreen_View.dart';
 import 'package:defioptimized_yield/presentation/Pages/LoginSystem/Widgets/CustomTextField_Widget.dart';
 import 'package:defioptimized_yield/presentation/Widgets/CustomButton_Widget.dart';
@@ -99,7 +100,7 @@ class LoginFormWidget extends StatelessWidget {
                   alignment: Alignment.topRight,
                   child: GestureDetector(
                     onTap: () {
-                      Get.to(const ForgotPasswordScreen());
+                      Get.to(() => const ForgotPasswordScreen());
                     },
                     child: Text(
                       "Forgot Password?",
@@ -116,7 +117,9 @@ class LoginFormWidget extends StatelessWidget {
                   height: buttonHeight * 0.07,
                   width: buttonWidth * 0.7,
                   text: "Sign In",
-                  onTap: () {},
+                  onTap: () {
+                    Get.to(() => const BottomNavigationScreen());
+                  },
                 ),
                 SizedBox(
                   height: Hight * 0.030,
@@ -129,40 +132,3 @@ class LoginFormWidget extends StatelessWidget {
     );
   }
 }
-
-/*
-TextFormField(
-                  validator: (val) {},
-                  onSaved: (val) {},
-                  controller: controller.passwordController,
-                  obscureText: passwordShowController.isObscureText.value,
-                  decoration: InputDecoration(
-                      label: const Text("Your Password"),
-                      labelStyle: Theme.of(context).textTheme.displaySmall,
-                      prefixIcon: Icon(
-                        Icons.lock_outline,
-                        color: dark ? const Color(0xffE4DFDF) : Colors.white,
-                      ),
-                      suffixIcon: IconButton(
-                        onPressed: () {
-                          passwordShowController.isObscureText.value =
-                              !passwordShowController.isObscureText.value;
-                        },
-                        icon: passwordShowController.isObscureText.value
-                            ? Icon(
-                                CupertinoIcons.eye_slash,
-                                color: dark
-                                    ? const Color(0xffE4DFDF)
-                                    : Colors.white,
-                              )
-                            : Icon(
-                                CupertinoIcons.eye,
-                                color: dark
-                                    ? const Color(0xffE4DFDF)
-                                    : Colors.white,
-                              ),
-                      ),
-                      border: const OutlineInputBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(10)))),
-                ),
- */

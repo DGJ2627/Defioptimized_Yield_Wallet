@@ -11,15 +11,15 @@ class KeyBoardBtn extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Height = HelperFunction.screenHeight(context);
-    final Width = HelperFunction.screenWidth(context);
+    final height = HelperFunction.screenHeight(context);
+    final width = HelperFunction.screenWidth(context);
     final dark = HelperFunction.isDarkMode(context);
     return GestureDetector(
       onTap: onTap,
       child: Container(
         alignment: Alignment.center,
-        height: Height * 0.2,
-        width: Width * 0.2,
+        height: height * 0.2,
+        width: width * 0.2,
         decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: dark

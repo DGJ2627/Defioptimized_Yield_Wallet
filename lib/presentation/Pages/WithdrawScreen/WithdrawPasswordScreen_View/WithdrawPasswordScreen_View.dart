@@ -94,7 +94,8 @@ class WithdrawPasswordScreenView extends StatelessWidget {
                         content: CustomDialogBox(
                           btnOnTap: () {
                             //Home Screen
-                            Get.to(const AllTransactionTabBarScreenView());
+                            Get.to(
+                                () => const AllTransactionTabBarScreenView());
                           },
                           btnText: "Done",
                           dialogTitle: "Withdraw SuccessFul",

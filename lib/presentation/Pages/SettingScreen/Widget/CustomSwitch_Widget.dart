@@ -58,10 +58,8 @@
 //   }
 // }
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 import '../../../../Utils/Helper/Helper.dart';
-import '../Controller/Switch_Controller.dart';
 
 class CustomSwitch extends StatelessWidget {
   const CustomSwitch(

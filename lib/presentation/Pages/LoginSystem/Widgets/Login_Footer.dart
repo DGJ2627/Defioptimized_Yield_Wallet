@@ -78,7 +78,7 @@ class LoginFooter extends StatelessWidget {
             alignment: Alignment.center,
             child: GestureDetector(
               onTap: () {
-                Get.to(const SignUpScreen());
+                Get.to(() => const SignUpScreen());
               },
               child: Text.rich(
                 TextSpan(children: [

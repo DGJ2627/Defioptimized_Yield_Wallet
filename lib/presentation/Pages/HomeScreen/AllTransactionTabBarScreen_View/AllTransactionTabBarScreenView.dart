@@ -11,6 +11,7 @@ import 'AllTransactionScreens/AllTransactionScreens.dart';
 import 'DepositScreen/DepositScreen_View.dart';
 import 'ReturnOnInvestmentScreen/ReturnOnInvestmentScreen_View.dart';
 import 'WithdrawTransactionScreen/WithdrawTransactionScreen_View.dart';
+import 'controller/AllTransactionTabBarScreen_Controller.dart';
 
 class AllTransactionTabBarScreenView extends StatefulWidget {
   const AllTransactionTabBarScreenView({super.key});
@@ -23,21 +24,14 @@ class AllTransactionTabBarScreenView extends StatefulWidget {
 class _AllTransactionTabBarScreenViewState
     extends State<AllTransactionTabBarScreenView>
     with SingleTickerProviderStateMixin {
-  late TabController _controller;
-  int _selectedIndex = 3;
+  final tabController = Get.put(AllTransactionTabBarScreenController());
 
   @override
   void initState() {
     // TODO: implement initState
     super.initState();
     // Create TabController for getting the index of current tab
-    _controller = TabController(length: 4, vsync: this);
-
-    _controller.addListener(() {
-      setState(() {
-        _selectedIndex = _controller.index;
-      });
-    });
+    tabController.tabController = TabController(length: 4, vsync: this);
   }
 
   @override
@@ -161,57 +155,55 @@ class _AllTransactionTabBarScreenViewState
           preferredSize: const Size.fromHeight(40),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 10),
-            child: DefaultTabController(
-              initialIndex: _selectedIndex,
-              length: 4,
-              child: ButtonsTabBar(
-                controller: _controller,
-                contentCenter: true,
-                contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                height: 36,
-                labelStyle: const TextStyle(fontSize: 15, color: Colors.white),
-                unselectedLabelStyle: TextStyle(
-                    fontSize: 15,
-                    color: dark
-                        ? const Color(0xff000000)
-                        : const Color(0xff777B95)),
-                unselectedBorderColor: dark
-                    ? const Color(0xffE9F0FC)
-                    : Colors.white.withOpacity(0.1),
-                unselectedBackgroundColor: dark
-                    ? const Color(0xffE9F0FC)
-                    : Colors.white.withOpacity(0.1),
-                borderColor: Colors.transparent,
-                borderWidth: 1,
-                // backgroundColor: const Color(0xff555DFD),
-                decoration: const BoxDecoration(
-                  gradient: LinearGradient(colors: [
-                    Color(0xff379FFE),
-                    Color(0xff555DFD),
-                  ]),
+            child: Obx(
+              () => DefaultTabController(
+                initialIndex: tabController.selectedIndex.value,
+                length: 4,
+                child: ButtonsTabBar(
+                  controller: tabController.tabController,
+                  contentCenter: true,
+                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+                  height: 36,
+                  labelStyle:
+                      const TextStyle(fontSize: 15, color: Colors.white),
+                  unselectedLabelStyle: TextStyle(
+                      fontSize: 15,
+                      color: dark
+                          ? const Color(0xff000000)
+                          : const Color(0xff777B95)),
+                  unselectedBorderColor: dark
+                      ? const Color(0xffE9F0FC)
+                      : Colors.white.withOpacity(0.1),
+                  unselectedBackgroundColor: dark
+                      ? const Color(0xffE9F0FC)
+                      : Colors.white.withOpacity(0.1),
+                  borderColor: Colors.transparent,
+                  borderWidth: 1,
+                  // backgroundColor: const Color(0xff555DFD),
+                  decoration: const BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [
+                        Color(0xff379FFE),
+                        Color(0xff555DFD),
+                      ],
+                    ),
+                  ),
+                  buttonMargin: const EdgeInsets.symmetric(horizontal: 8),
+                  tabs: tabController.tabNames
+                      .map(
+                        (e) => Tab(
+                          text: e,
+                        ),
+                      )
+                      .toList(),
                 ),
-                buttonMargin: const EdgeInsets.symmetric(horizontal: 8),
-                tabs: const [
-                  Tab(
-                    text: "Deposit",
-                  ),
-                  Tab(
-                    text: "Withdraw",
-                  ),
-                  Tab(
-                    text: "Return on Investment",
-                  ),
-                  Tab(
-                    text: "All",
-                  )
-                ],
               ),
             ),
           ),
         ),
       ),
       body: TabBarView(
-        controller: _controller,
+        controller: tabController.tabController,
         children: const [
           DepositScreenView(),
           WithdrawTransactionScreenView(),
@@ -222,3 +214,15 @@ class _AllTransactionTabBarScreenViewState
     );
   }
 }
+
+/*
+TabBarView(
+          controller: tabController.tabController,
+          children: const [
+            DepositScreenView(),
+            WithdrawTransactionScreenView(),
+            ReturnOnInvestmentScreen(),
+            AllTransactionScreens(),
+          ],
+        ),
+ */

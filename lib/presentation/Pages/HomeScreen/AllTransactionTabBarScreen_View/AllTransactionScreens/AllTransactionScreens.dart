@@ -29,10 +29,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               const Gap(30),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: false,
-                inNotStatus: true,
+                // isNotShow: false,
+                // inNotStatus: true,
                 image: ImagePath.imagePath.returnOnHistoryIcon,
                 title: "Balance Deposit",
                 transactionTime: "15 May 2020 8:00 am",
@@ -48,10 +48,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: true,
-                inNotStatus: false,
+                // isNotShow: true,
+                // inNotStatus: false,
                 image: ImagePath.imagePath.withdrawPendingIcon,
                 title: "Withdraw",
                 subTitle: "********2623",
@@ -68,10 +68,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: true,
-                inNotStatus: false,
+                // isNotShow: true,
+                // inNotStatus: false,
                 image: ImagePath.imagePath.withdrawFailedIcon,
                 title: "Withdraw",
                 subTitle: "********2623",
@@ -88,10 +88,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: true,
-                inNotStatus: false,
+                // isNotShow: true,
+                // inNotStatus: false,
                 image: ImagePath.imagePath.withdrawSuccessfullyIcon,
                 title: "Withdraw",
                 subTitle: "********2623",
@@ -108,10 +108,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: false,
-                inNotStatus: true,
+                // isNotShow: false,
+                // inNotStatus: true,
                 image: ImagePath.imagePath.returnOnHistoryIcon,
                 title: "Balance Deposit",
                 transactionTime: "15 May 2020 8:00 am",
@@ -127,10 +127,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: false,
-                inNotStatus: true,
+                // isNotShow: false,
+                // inNotStatus: true,
                 image: ImagePath.imagePath.returnOnHistoryIcon,
                 title: "Balance Deposit",
                 transactionTime: "15 May 2020 8:00 am",
@@ -146,10 +146,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: true,
-                inNotStatus: false,
+                // isNotShow: true,
+                // inNotStatus: false,
                 image: ImagePath.imagePath.withdrawPendingIcon,
                 title: "Withdraw",
                 subTitle: "********2623",
@@ -166,10 +166,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: true,
-                inNotStatus: false,
+                // isNotShow: true,
+                // inNotStatus: false,
                 image: ImagePath.imagePath.withdrawFailedIcon,
                 title: "Withdraw",
                 subTitle: "********2623",
@@ -186,10 +186,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: true,
-                inNotStatus: false,
+                // isNotShow: true,
+                // inNotStatus: false,
                 image: ImagePath.imagePath.withdrawSuccessfullyIcon,
                 title: "Withdraw",
                 subTitle: "********2623",
@@ -206,10 +206,10 @@ class _AllTransactionScreensState extends State<AllTransactionScreens>
               ),
               TransactionHistoryWidget(
                 onTap: () {
-                  Get.to(const TransactionDetailsScreenView());
+                  Get.to(() => () => const TransactionDetailsScreenView());
                 },
-                isNotShow: false,
-                inNotStatus: true,
+                // isNotShow: false,
+                // inNotStatus: true,
                 image: ImagePath.imagePath.returnOnHistoryIcon,
                 title: "Balance Deposit",
                 transactionTime: "15 May 2020 8:00 am",

@@ -17,8 +17,8 @@ class TransactionHistoryWidget extends StatelessWidget {
     required this.backgroundDark,
     required this.profitTextColor,
     required this.totalBalanceTextColor,
-    required this.isNotShow,
-    required this.inNotStatus,
+    // required this.isNotShow,
+    // required this.inNotStatus,
     this.onTap,
   });
 
@@ -32,8 +32,8 @@ class TransactionHistoryWidget extends StatelessWidget {
   final Color backgroundDark;
   final Color profitTextColor;
   final Color totalBalanceTextColor;
-  final bool isNotShow;
-  final bool inNotStatus;
+  // final bool isNotShow;
+  // final bool inNotStatus;
   final void Function()? onTap;
 
   @override
@@ -56,6 +56,96 @@ class TransactionHistoryWidget extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Container(
+                alignment: Alignment.center,
+                height: Height * 0.14,
+                width: Width * 0.14,
+                decoration: BoxDecoration(
+                  shape: BoxShape.circle,
+                  color: dark ? Colors.white : Colors.white.withOpacity(0.1),
+                ),
+                child: SvgPicture.asset(
+                  image,
+                  fit: BoxFit.cover,
+                ),
+              ),
+              const SizedBox(
+                width: 10,
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Text(
+                    title,
+                    style: GoogleFonts.plusJakartaSans(
+                        fontSize: 12,
+                        color: dark ? Colors.black : Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  const SizedBox(
+                    height: 2,
+                  ),
+                  // if (isNotShow)
+                  Text(
+                    subTitle ?? "",
+                    style: GoogleFonts.plusJakartaSans(
+                        fontSize: subTitle == null ? 0 : 12,
+                        color: dark ? Colors.black : Colors.white,
+                        fontWeight: FontWeight.w600),
+                  ),
+                  Text(
+                    transactionTime,
+                    style: GoogleFonts.plusJakartaSans(
+                      fontSize: 10,
+                      fontWeight: FontWeight.w500,
+                      color: dark
+                          ? const Color(0xff838284)
+                          : const Color(0xff777B95),
+                    ),
+                  ),
+                ],
+              ),
+              Expanded(
+                flex: 3,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    Text(
+                      profit,
+                      style: GoogleFonts.plusJakartaSans(
+                          fontSize: 14,
+                          color: profitTextColor,
+                          fontWeight: FontWeight.w600),
+                    ),
+                    const SizedBox(
+                      height: 5,
+                    ),
+                    Text(
+                      totalBalance,
+                      style: GoogleFonts.plusJakartaSans(
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500,
+                        color: totalBalanceTextColor,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+/*
+Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -152,8 +242,4 @@ class TransactionHistoryWidget extends StatelessWidget {
               ),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
+ */

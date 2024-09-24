@@ -75,7 +75,8 @@ class HomeScreenUserTopSideWidget extends StatelessWidget {
                       border: Border.all(color: Colors.white.withOpacity(0.7)),
                       color: Colors.white.withOpacity(0.4)),
                   child: IconButton(
-                      onPressed: () => Get.to(const NotificationScreenView()),
+                      onPressed: () =>
+                          Get.to(() => const NotificationScreenView()),
                       icon: const Icon(
                         Iconsax.notification_bing,
                         color: Colors.white,
