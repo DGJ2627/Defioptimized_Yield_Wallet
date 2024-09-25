@@ -98,7 +98,7 @@ class ROIAddPasswordScreenView extends StatelessWidget {
                             Get.offAll(const AddInvestmentScreenView());
                           },
                           btnText: "Done",
-                          dialogTitle: "SuccessFul",
+                          dialogTitle: "Successful!",
                           dialogSubTitle: "Investment Amount",
                         ),
                       );

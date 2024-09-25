@@ -42,8 +42,9 @@ class BottomNavigationScreen extends StatelessWidget {
                       : isSelectedColor
                           ? Colors.white
                           : const Color(0xff777B95),
+                  size: 24,
                 ),
-                const Gap(4),
+                const Gap(8),
                 AutoSizeText(
                   controller.iconNames[index],
                   style: GoogleFonts.plusJakartaSans(
@@ -73,6 +74,7 @@ class BottomNavigationScreen extends StatelessWidget {
               dark ? const Color(0xffF2F2F2) : const Color(0xff222F44),
         ),
       ),
+
       floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
 
       //floatingActionButton btn

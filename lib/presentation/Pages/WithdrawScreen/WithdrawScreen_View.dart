@@ -1,11 +1,10 @@
-import 'package:defioptimized_yield/Utils/Helper/Helper.dart';
-import 'package:defioptimized_yield/presentation/Pages/WithdrawScreen/WithdrawAmount_View/WithdrawAmount_View.dart';
 import 'package:flutter/material.dart';
+import 'package:defioptimized_yield/presentation/Pages/WithdrawScreen/WithdrawAmount_View/WithdrawAmount_View.dart';
+import 'package:defioptimized_yield/Utils/Helper/Helper.dart';
 import 'package:gap/gap.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:iconsax/iconsax.dart';
-
 import '../../../Utils/constants/ImagePath/ImagePath.dart';
 import '../HomeScreen/AllTransactionTabBarScreen_View/AllTransactionTabBarScreenView.dart';
 import '../HomeScreen/Widgets/TransactionHistoryWidget.dart';
@@ -25,10 +24,9 @@ class WithdrawScreen extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              //Balance show card
               Container(
-                height: 112,
-                width: 335,
+                height: 120,
+                width: 400,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(20),
                   gradient: const LinearGradient(
@@ -161,8 +159,6 @@ class WithdrawScreen extends StatelessWidget {
                 ),
               ),
               const Gap(30),
-
-              //view all data
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -193,9 +189,9 @@ class WithdrawScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              const Gap(30),
+              const Gap(10),
               SizedBox(
-                height: 490,
+                height: 484,
                 width: double.infinity,
                 child: SingleChildScrollView(
                   child: Column(
@@ -203,8 +199,6 @@ class WithdrawScreen extends StatelessWidget {
                     children: [
                       const Gap(20),
                       TransactionHistoryWidget(
-                        //isNotShow: false,
-                        //inNotStatus: true,
                         image: ImagePath.imagePath.returnOnHistoryIcon,
                         title: "Balance Deposit",
                         transactionTime: "15 May 2020 8:00 am",
@@ -220,8 +214,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        //isNotShow: true,
-                        //inNotStatus: false,
                         image: ImagePath.imagePath.withdrawPendingIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -238,8 +230,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: true,
-                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawFailedIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -256,8 +246,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: true,
-                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawSuccessfullyIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -274,8 +262,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: false,
-                        // inNotStatus: true,
                         image: ImagePath.imagePath.withdrawFailedIcon,
                         title: "Balance Deposit",
                         transactionTime: "15 May 2020 8:00 am",
@@ -291,8 +277,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: true,
-                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawPendingIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -309,8 +293,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: true,
-                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawFailedIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -327,8 +309,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: true,
-                        // inNotStatus: false,
                         image: ImagePath.imagePath.withdrawSuccessfullyIcon,
                         title: "Withdraw",
                         subTitle: "********2623",
@@ -345,8 +325,6 @@ class WithdrawScreen extends StatelessWidget {
                         height: 10,
                       ),
                       TransactionHistoryWidget(
-                        // isNotShow: false,
-                        // inNotStatus: true,
                         image: ImagePath.imagePath.withdrawFailedIcon,
                         title: "Balance Deposit",
                         transactionTime: "15 May 2020 8:00 am",

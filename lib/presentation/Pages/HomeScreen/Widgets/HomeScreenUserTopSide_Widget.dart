@@ -27,7 +27,7 @@ class HomeScreenUserTopSideWidget extends StatelessWidget {
       const Color(0xff555DFD),
     ];
     return Container(
-      height: Height * 0.38,
+      height: Height * 0.328,
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: const BorderRadius.only(
