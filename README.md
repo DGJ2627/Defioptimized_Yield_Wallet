@@ -1,7 +1,7 @@
 # Defioptimized-Yield-Wallet
 
 
-# Dark Theme
+# - Dark Theme
 
 # Splash & Onborading Screens
 
