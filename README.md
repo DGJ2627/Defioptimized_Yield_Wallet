@@ -1,7 +1,7 @@
 # Defioptimized-Yield-Wallet
 
 
-# - Dark Theme
+#  Dark Theme
 
 # Splash & Onborading Screens
 
@@ -53,6 +53,10 @@
 <img src = "https://github.com/user-attachments/assets/5bce0890-5998-43be-bf93-78fefa82c1bf" width = "300">
 <img src = "https://github.com/user-attachments/assets/a05e6199-893f-4b6b-a54b-63fda4647e10" width = "300">
 <img src = "https://github.com/user-attachments/assets/1752316e-d408-42b7-b133-1be53f30469c" width = "300">
+
+
+
+#  Light Theme
 <img src = "![Uploading image.png…]()" width = "300">
 
 
