@@ -34,15 +34,25 @@
 # Withdraw Screen
 
 <img src = "https://github.com/user-attachments/assets/ca249d02-d654-4284-becf-1df186d96e46" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
-<img src = "" width = "300">
+<img src = "https://github.com/user-attachments/assets/bd0627e2-e625-4e48-80a4-66762df74af8" width = "300">
+<img src = "https://github.com/user-attachments/assets/050132e7-8f37-4308-980b-8992c21f1672" width = "300">
+<img src = "![image](https://github.com/user-attachments/assets/030b17b4-c4b4-488f-bdd2-7cb2a0def000)" width = "300">
+
+# Setting Screen
+
+<img src = "https://github.com/user-attachments/assets/9e7edba0-e8a3-4a9d-92f7-e4e7314410af" width = "300">
+<img src = "https://github.com/user-attachments/assets/b2518b88-9407-406f-92f2-48dddb21107a" width = "300">
+<img src = "https://github.com/user-attachments/assets/34018641-8dc3-4efb-b7e7-823d4d94156d" width = "300">
+<img src = "https://github.com/user-attachments/assets/535ea0f6-b666-4d0b-b08f-acd84a1878c4" width = "300">
+<img src = "https://github.com/user-attachments/assets/90ff3815-753d-4a2d-ac16-490cea50316f" width = "300">
+<img src = "https://github.com/user-attachments/assets/365724ec-79ec-4164-8661-6f8a55254e9c" width = "300">
+<img src = "https://github.com/user-attachments/assets/c61e4103-8e1d-447b-89af-5736c25a502f" width = "300">
+<img src = "https://github.com/user-attachments/assets/d68e734f-7cfa-40ef-816c-7b131245adc2" width = "300">
+<img src = "https://github.com/user-attachments/assets/5b839cfe-8a53-4754-a877-115a762dc300" width = "300">
+<img src = "https://github.com/user-attachments/assets/98c4bfc4-2067-4444-ad6b-3f3ca07b5958" width = "300">
+<img src = "https://github.com/user-attachments/assets/5bce0890-5998-43be-bf93-78fefa82c1bf" width = "300">
+<img src = "https://github.com/user-attachments/assets/a05e6199-893f-4b6b-a54b-63fda4647e10" width = "300">
+<img src = "https://github.com/user-attachments/assets/1752316e-d408-42b7-b133-1be53f30469c" width = "300">
+<img src = "![Uploading image.png…]()" width = "300">
+
+
