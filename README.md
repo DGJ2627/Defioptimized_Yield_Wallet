@@ -41,6 +41,7 @@
 # Setting Screen
 
 <img src = "https://github.com/user-attachments/assets/9e7edba0-e8a3-4a9d-92f7-e4e7314410af" width = "300">
+<img src = "https://github.com/user-attachments/assets/956741db-60af-49d5-97ad-92ab397f7e2d" width = "300">
 <img src = "https://github.com/user-attachments/assets/b2518b88-9407-406f-92f2-48dddb21107a" width = "300">
 <img src = "https://github.com/user-attachments/assets/34018641-8dc3-4efb-b7e7-823d4d94156d" width = "300">
 <img src = "https://github.com/user-attachments/assets/535ea0f6-b666-4d0b-b08f-acd84a1878c4" width = "300">
@@ -56,7 +57,22 @@
 
 
 
-#  Light Theme
-<img src = "![Uploading image.png…]()" width = "300">
+#  Light Them
+<img src = "https://github.com/user-attachments/assets/c6cfcd6d-2e64-4c65-a626-fb8a088cf0f5" width = "300">
+<img src = "https://github.com/user-attachments/assets/2732334f-8676-42ab-9b90-b846f7226e42" width = "300">
+<img src = "https://github.com/user-attachments/assets/0c6fa4de-ec25-4cdf-90ed-87f43162fca4" width = "300">
+<img src = "https://github.com/user-attachments/assets/ad77f476-89cf-4515-a896-8acaff5edceb" width = "300">
+<img src = "https://github.com/user-attachments/assets/70dd47cb-d139-4d71-abfc-d6eda381982d" width = "300">
+<img src = "https://github.com/user-attachments/assets/45d4ab49-6f61-4509-b9e7-9ad771ffd5ae" width = "300">
+<img src = "https://github.com/user-attachments/assets/08a721b9-eacc-45db-8fcb-3cea1a33eb11" width = "300">
+<img src = "https://github.com/user-attachments/assets/1e817804-d5f5-49e7-ae0d-a499b6b145cf" width = "300">
+<img src = "https://github.com/user-attachments/assets/972fa762-b0cb-4766-9080-ae336587ca17" width = "300">
+<img src = "" width = "300">
+<img src = "" width = "300">
+<img src = "" width = "300">
+<img src = "" width = "300">
+<img src = "" width = "300">
+<img src = "" width = "300">
+<img src = "" width = "300">
 
 
